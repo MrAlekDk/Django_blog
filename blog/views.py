@@ -20,6 +20,7 @@ class PostListView(ListView):
     template_name = 'blog/home.html'
     context_object_name = 'posts' #This changes the name from the default objectlist to posts which I used in my home template
     ordering = ['-date_posted']
+    paginate_by = 5
 
 class PostDetailView(DetailView):
     model = Post
